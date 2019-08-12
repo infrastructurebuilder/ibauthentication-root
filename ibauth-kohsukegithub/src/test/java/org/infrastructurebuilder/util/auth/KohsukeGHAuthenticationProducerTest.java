@@ -16,7 +16,6 @@
 package org.infrastructurebuilder.util.auth;
 
 import static java.util.stream.Collectors.toList;
-import static org.infrastructurebuilder.util.auth.kohsuke.KohsukeGHAuthenticationProducer.KOHSUKE_GITHUB;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -29,6 +28,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.infrastructurebuilder.IBConstants;
 import org.infrastructurebuilder.util.auth.kohsuke.KohsukeGHAuthenticationProducer;
 import org.infrastructurebuilder.util.config.WorkingPathSupplier;
 import org.jooq.tools.reflect.Reflect;
@@ -47,7 +47,7 @@ public class KohsukeGHAuthenticationProducerTest {
   public static final String A = "A";
 
   private static final String ERROR = "error";
-  private static final List<String> KK_ARRAY = Arrays.asList(KOHSUKE_GITHUB);
+  private static final List<String> KK_ARRAY = Arrays.asList(IBConstants.GITHUB);
   private static Path targetPath;
   private static WorkingPathSupplier wps = new WorkingPathSupplier();
 
@@ -106,14 +106,14 @@ public class KohsukeGHAuthenticationProducerTest {
   public void testGetTextOfAuthFileForTOOMANYTypes() {
     final DefaultIBAuthentication a3 = new DefaultIBAuthentication();
     a3.setServerId(UNO);
-    a3.setType(KohsukeGHAuthenticationProducer.KOHSUKE_TYPE);
+    a3.setType(IBConstants.GITHUB);
     Reflect.on(a3).set("secret", Optional.of(PW1));
     a3.setTarget(DOS);
     final List<DefaultIBAuthentication> authentications2 = Arrays.asList(a1, a2, a3);
     final KohsukeGHAuthenticationProducer writer2 = new KohsukeGHAuthenticationProducer();
     writer2.setFactory(factory);
     factory.setAuthentications(authentications2.stream().collect(Collectors.toList()));
-    assertTrue(writer.getTextOfAuthFileForTypes(Arrays.asList(KohsukeGHAuthenticationProducer.KOHSUKE_TYPE)).isPresent());
+    assertTrue(writer.getTextOfAuthFileForTypes(Arrays.asList(IBConstants.GITHUB)).isPresent());
   }
 
   @Test(expected = IBAuthException.class)
@@ -126,7 +126,7 @@ public class KohsukeGHAuthenticationProducerTest {
   @Ignore
   @Test
   public void testGetTextOfAuthFileForTypes1() {
-    final Optional<String> x = writer.getTextOfAuthFileForTypes(Arrays.asList(KohsukeGHAuthenticationProducer.KOHSUKE_TYPE));
+    final Optional<String> x = writer.getTextOfAuthFileForTypes(Arrays.asList(IBConstants.GITHUB));
     assertTrue(x.isPresent());
   }
 
@@ -139,7 +139,7 @@ public class KohsukeGHAuthenticationProducerTest {
   @Ignore
   @Test
   public void testGetTextOfAuthFileForTypesYes() {
-    assertFalse(writer.getTextOfAuthFileForTypes(Arrays.asList(KohsukeGHAuthenticationProducer.KOHSUKE_TYPE)).isPresent());
+    assertFalse(writer.getTextOfAuthFileForTypes(Arrays.asList(IBConstants.GITHUB)).isPresent());
   }
 
   @Test

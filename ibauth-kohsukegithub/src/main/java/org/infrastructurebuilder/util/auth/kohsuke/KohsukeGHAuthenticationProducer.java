@@ -15,6 +15,8 @@
  */
 package org.infrastructurebuilder.util.auth.kohsuke;
 
+import static org.infrastructurebuilder.IBConstants.GITHUB;
+
 import java.time.Instant;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -32,19 +34,17 @@ import org.infrastructurebuilder.util.auth.IBAuthException;
 import org.infrastructurebuilder.util.auth.IBAuthentication;
 import org.infrastructurebuilder.util.auth.IBAuthenticationProducer;
 
-@Named(KohsukeGHAuthenticationProducer.KOHSUKE_TYPE)
+@Named(GITHUB)
 @Typed(IBAuthenticationProducer.class)
 @Description("Kohsuke GitHub File Writer")
 public class KohsukeGHAuthenticationProducer extends IBAuthAbstractAuthenticationProducer {
-  public static final String KOHSUKE_TYPE = "kohsuke-github-auth-producer";
   public static final String KOHSUKE_FILENAME_VAR = "KOHSUKE_GITHUB_FILE";
   public static final String KOHSUKE_PREFIX = "github_";
-  public static final String KOHSUKE_GITHUB = "kohsuke-github";
   public static final String KOHSUKE_LOGIN = "login";
   public static final String KOHSUKE_OUATH = "oauth";
   public static final String KOHSUKE_ENDPOINT = "endpoint";
 
-  private final static List<String> responseTypes = Arrays.asList(KOHSUKE_GITHUB);
+  private final static List<String> responseTypes = Arrays.asList(GITHUB);
 
   @Override
   public String getEnvironmentVariableCredsFileName() {

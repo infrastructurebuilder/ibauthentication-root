@@ -23,7 +23,7 @@ In the default implementation , id is a random UUID string.  Type and ServerId a
 `type` can be set to the mapping type specified by this instance.  `target` is the generic term to mean what equates to a "region" in AWS
 (a thing with availability zones that is seperate from others of its kind).  `serverId` is used to map to an `<id/>` in a `settings.xml` file, in the `<servers/>` section.
 
-`principal` and `secret` are the principal identifier and the "password" or secret.
+`principal` and `secret` are (1) the principal identifier and (2) the "password" or secret.
 
 ### Using the Component
 
@@ -76,7 +76,7 @@ Basically, it's looking for a match of `<serverId>` to the `<id>` of a `<server>
 Since the `<id>` of a server matched, the principal is set to `myUserName` and the secret is set to `myPassword`.
 
 
-** If nothing matches, then the auth DAO simply won't be updated and the written file could be incorrect.**
+** If nothing matches, then the auth DAO simply won't be updated and the written file could be incorrect. **
 
 
 
