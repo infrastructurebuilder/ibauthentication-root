@@ -232,5 +232,6 @@
     <module>ibauth-virtualbox</module>
     <module>ibauth-gcp</module>
     <module>ibauth-kohsukegithub</module>
+    <module>ibauth-azuredevops</module>
   </modules>
 </project>
