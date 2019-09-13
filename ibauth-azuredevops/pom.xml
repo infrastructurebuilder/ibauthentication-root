@@ -25,16 +25,15 @@
     <version>0.9.1-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>ibauth-pypirc</artifactId>
+  <artifactId>ibauth-azuredevops</artifactId>
   <packaging>jar</packaging>
   <name>${project.artifactId}</name>
-  <description>Mapper for .pypirc</description>
+  <description>Mapper for AzureDevops auth api</description>
   <inceptionYear>2019</inceptionYear>
   <properties>
     <surefire.failIfNoTests>false</surefire.failIfNoTests>
-    <jacoco.max.missed.classes>0</jacoco.max.missed.classes>
-    <test.coverage.percentage.required>99</test.coverage.percentage.required>
-    <plexus-interactivity-api.version>1.0-alpha-6</plexus-interactivity-api.version>
+    <test.coverage.percentage.required>50</test.coverage.percentage.required>
+    <jacoco.max.missed.classes>10</jacoco.max.missed.classes>
   </properties>
   <dependencies>
     <dependency>
@@ -43,9 +42,15 @@
     </dependency>
     <dependency>
       <groupId>org.infrastructurebuilder.util.auth</groupId>
+      <artifactId>ibauth-factory</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.infrastructurebuilder.util.auth</groupId>
       <artifactId>ibauth-api</artifactId>
       <type>test-jar</type>
     </dependency>
+    <!-- This LOOKS like you'd get it from a-m-api, but that one is set to "provided", so you have to also -->
     <dependency>
       <groupId>org.codehaus.plexus</groupId>
       <artifactId>plexus-component-annotations</artifactId>
@@ -56,10 +61,13 @@
       <artifactId>org.eclipse.sisu.plexus</artifactId>
       <scope>test</scope>
     </dependency>
-
   </dependencies>
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.eclipse.sisu</groupId>
+        <artifactId>sisu-maven-plugin</artifactId>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -70,17 +78,8 @@
         </configuration>
       </plugin>
       <plugin>
-        <groupId>org.codehaus.plexus</groupId>
-        <artifactId>plexus-component-metadata</artifactId>
-        <executions>
-          <execution>
-            <id>generate-plexus-metadata</id>
-            <phase>process-classes</phase>
-            <goals>
-              <goal>generate-metadata</goal>
-            </goals>
-          </execution>
-        </executions>
+        <groupId>com.googlecode.maven-download-plugin</groupId>
+        <artifactId>download-maven-plugin</artifactId>
       </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>

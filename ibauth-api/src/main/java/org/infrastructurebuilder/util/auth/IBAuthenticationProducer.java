@@ -45,6 +45,10 @@ public interface IBAuthenticationProducer {
 
   Optional<String> getTextOfAuthFileForTypes(List<String> requireNonNull);
 
+  /**
+   * Returns true if this produces a file that is meant to be used as environment variables
+   * @return
+   */
   boolean isEnvironmentVariableCredsFile();
 
   default boolean respondsTo(final String type) {

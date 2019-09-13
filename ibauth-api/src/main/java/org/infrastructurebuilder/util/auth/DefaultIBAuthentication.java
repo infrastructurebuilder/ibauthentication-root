@@ -15,11 +15,13 @@
  */
 package org.infrastructurebuilder.util.auth;
 
+import static java.util.Objects.requireNonNull;
+import static java.util.Optional.of;
+import static java.util.Optional.ofNullable;
 import static org.infrastructurebuilder.IBConstants.PASSWORD;
 import static org.infrastructurebuilder.IBConstants.USERNAME;
 import static org.infrastructurebuilder.util.IBUtils.getOptString;
 
-import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -30,7 +32,7 @@ public class DefaultIBAuthentication implements IBAuthentication {
   public final static IBAuthentication addJSON(final IBAuthentication a, final JSONObject servers,
       final Optional<String> additional) {
     return new DefaultIBAuthentication(a,
-        Optional.ofNullable(Objects.requireNonNull(servers).optJSONObject(a.getServerId())).orElse(new JSONObject()),
+        ofNullable(requireNonNull(servers).optJSONObject(a.getServerId())).orElse(new JSONObject()),
         additional);
   }
 
@@ -50,15 +52,13 @@ public class DefaultIBAuthentication implements IBAuthentication {
   }
 
   private DefaultIBAuthentication(final IBAuthentication a, final JSONObject servers, final Optional<String> additional) {
-    id = Objects.requireNonNull(a).getId();
-    type = Optional.of(a.getType());
-    serverId = Optional.of(a.getServerId());
+    id = requireNonNull(a).getId();
+    type = of(a.getType());
+    serverId = of(a.getServerId());
     target = a.getTarget();
-    Objects.requireNonNull(servers);
-    Objects.requireNonNull(additional);
-    principal = getOptString(servers, USERNAME);
+    principal = getOptString(requireNonNull(servers), USERNAME);
     secret = getOptString(servers, PASSWORD);
-    this.additional = Objects.requireNonNull(additional);
+    this.additional = requireNonNull(additional);
   }
 
   @Override
@@ -133,15 +133,15 @@ public class DefaultIBAuthentication implements IBAuthentication {
   }
 
   public void setServerId(final String serverId) {
-    this.serverId = Optional.ofNullable(serverId).map(String::trim);
+    this.serverId = ofNullable(serverId).map(String::trim);
   }
 
   public void setTarget(final String target) {
-    this.target = Optional.ofNullable(target).map(String::trim);
+    this.target = ofNullable(target).map(String::trim);
   }
 
   public void setType(final String type) {
-    this.type = Optional.ofNullable(type).map(String::trim);
+    this.type = ofNullable(type).map(String::trim);
   }
 
 }
