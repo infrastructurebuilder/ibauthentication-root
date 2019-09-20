@@ -17,15 +17,10 @@ package org.infrastructurebuilder.util.auth;
 
 import static org.junit.Assert.assertNotNull;
 
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.Optional;
 
-import org.infrastructurebuilder.util.config.WorkingPathSupplier;
 import org.junit.Before;
 import org.junit.Test;
 
