@@ -20,7 +20,7 @@
   <parent>
     <groupId>org.infrastructurebuilder</groupId>
     <artifactId>ibparent</artifactId>
-    <version>13-SNAPSHOT</version>
+    <version>25-SNAPSHOT</version>
   </parent>
   <groupId>org.infrastructurebuilder.util.auth</groupId>
   <artifactId>ibauthentication-root</artifactId>
@@ -56,7 +56,7 @@
       <dependency>
         <groupId>org.infrastructurebuilder.util</groupId>
         <artifactId>ibcore-bom</artifactId>
-        <version>0.11.2.0-SNAPSHOT</version>
+        <version>0.14.1.0-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -212,10 +212,6 @@
               <target>${project.build.directory}</target>
             </systemPropertyVariables>
           </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.infrastructurebuilder.maven</groupId>
-          <artifactId>ibversions-maven-plugin</artifactId>
         </plugin>
       </plugins>
     </pluginManagement>
