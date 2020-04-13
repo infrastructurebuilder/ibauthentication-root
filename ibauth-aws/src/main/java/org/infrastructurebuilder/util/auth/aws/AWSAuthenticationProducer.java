@@ -26,9 +26,9 @@ import javax.inject.Named;
 import org.eclipse.sisu.Description;
 import org.eclipse.sisu.Typed;
 import org.infrastructurebuilder.util.auth.IBAuthAbstractAuthenticationProducer;
+import org.infrastructurebuilder.util.auth.IBAuthException;
 import org.infrastructurebuilder.util.auth.IBAuthentication;
 import org.infrastructurebuilder.util.auth.IBAuthenticationProducer;
-import org.infrastructurebuilder.util.auth.IBAuthException;
 
 @Named("aws-auth-producer")
 @Typed(IBAuthenticationProducer.class)

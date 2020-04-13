@@ -15,24 +15,20 @@
  */
 package org.infrastructurebuilder.util.auth;
 
+import static org.infrastructurebuilder.util.auth.aws.AWSAuthenticationProducer.AWS_EBS;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 
 import java.io.IOException;
-import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Optional;
 
 import org.infrastructurebuilder.util.config.WorkingPathSupplier;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import static org.infrastructurebuilder.util.auth.aws.AWSAuthenticationProducer.*;
 
 public class AWSAuthenticationProducerTest {
 
@@ -47,7 +43,6 @@ public class AWSAuthenticationProducerTest {
   }
 
   private DefaultAuthenticationProducerFactory spi;
-  private List<DefaultIBAuthentication> authsGood;
   private DefaultIBAuthentication a1;
 
   @Before
@@ -69,7 +64,6 @@ public class AWSAuthenticationProducerTest {
     a3.setType(AWS_EBS);
     a2.setTarget("east2");
 
-    authsGood = Arrays.asList(a1, a2);
   }
 
   @Test(expected = IBAuthException.class)
