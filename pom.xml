@@ -15,12 +15,14 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.infrastructurebuilder</groupId>
     <artifactId>ibparent</artifactId>
-    <version>31</version>
+    <version>35</version>
   </parent>
   <groupId>org.infrastructurebuilder.util.auth</groupId>
   <artifactId>ibauthentication-root</artifactId>
@@ -56,14 +58,14 @@
       <dependency>
         <groupId>org.infrastructurebuilder.util</groupId>
         <artifactId>ibcore-bom</artifactId>
-        <version>0.17.0.0</version>
+        <version>0.17.1.0</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.infrastructurebuilder</groupId>
         <artifactId>maven-import-bom</artifactId>
-        <version>${maven.version}.1</version>
+        <version>${maven.version}.2</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -117,7 +119,7 @@
     </dependency>
     <dependency>
       <groupId>org.jooq</groupId>
-      <artifactId>joor-java-8</artifactId>
+      <artifactId>joor</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
