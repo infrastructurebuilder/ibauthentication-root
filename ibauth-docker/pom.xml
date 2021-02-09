@@ -20,7 +20,7 @@
   <parent>
     <groupId>org.infrastructurebuilder.util.auth</groupId>
     <artifactId>ibauthentication-root</artifactId>
-    <version>0.9.4-SNAPSHOT</version>
+    <version>0.9.3-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>ibauth-docker</artifactId>
