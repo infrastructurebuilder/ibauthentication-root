@@ -18,8 +18,8 @@ package org.infrastructurebuilder.util.auth;
 import static java.util.Objects.requireNonNull;
 import static java.util.Optional.of;
 import static java.util.Optional.ofNullable;
-import static org.infrastructurebuilder.IBConstants.PASSWORD;
-import static org.infrastructurebuilder.IBConstants.USERNAME;
+import static org.infrastructurebuilder.util.constants.IBConstants.PASSWORD;
+import static org.infrastructurebuilder.util.constants.IBConstants.USERNAME;
 import static org.infrastructurebuilder.util.IBUtils.getOptString;
 
 import java.util.Optional;

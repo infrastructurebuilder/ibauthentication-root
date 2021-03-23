@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import org.infrastructurebuilder.IBConstants;
+import org.infrastructurebuilder.util.constants.IBConstants;
 import org.infrastructurebuilder.util.auth.azuredevops.AzureDevopsAuthenticationProducer;
 import org.infrastructurebuilder.util.config.WorkingPathSupplier;
 import org.jooq.tools.reflect.Reflect;

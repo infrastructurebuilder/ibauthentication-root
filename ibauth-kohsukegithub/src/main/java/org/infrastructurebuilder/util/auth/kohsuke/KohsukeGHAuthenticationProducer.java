@@ -15,7 +15,7 @@
  */
 package org.infrastructurebuilder.util.auth.kohsuke;
 
-import static org.infrastructurebuilder.IBConstants.GITHUB;
+import static org.infrastructurebuilder.util.constants.IBConstants.GITHUB;
 
 import java.time.Instant;
 import java.util.Arrays;

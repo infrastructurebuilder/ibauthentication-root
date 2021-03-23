@@ -32,7 +32,7 @@ import org.infrastructurebuilder.util.auth.DefaultIBAuthentication;
 import org.infrastructurebuilder.util.auth.DummyNOPAuthenticationProducerFactory;
 import org.infrastructurebuilder.util.auth.IBAuthException;
 import org.infrastructurebuilder.util.config.WorkingPathSupplier;
-import org.jooq.tools.reflect.Reflect;
+import org.joor.Reflect;
 import org.junit.Before;
 import org.junit.Test;
 

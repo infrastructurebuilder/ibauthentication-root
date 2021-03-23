@@ -15,7 +15,7 @@
  */
 package org.infrastructurebuilder.util.auth.azuredevops;
 
-import static org.infrastructurebuilder.IBConstants.*;
+import static org.infrastructurebuilder.util.constants.IBConstants.*;
 
 import java.time.Instant;
 import java.util.Arrays;
