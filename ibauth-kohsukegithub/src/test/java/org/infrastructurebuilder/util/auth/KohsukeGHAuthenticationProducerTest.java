@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright © 2019 admin (admin@infrastructurebuilder.org)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,9 +28,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import org.infrastructurebuilder.IBConstants;
 import org.infrastructurebuilder.util.auth.kohsuke.KohsukeGHAuthenticationProducer;
-import org.infrastructurebuilder.util.config.WorkingPathSupplier;
+import org.infrastructurebuilder.util.constants.IBConstants;
+import org.infrastructurebuilder.util.core.WorkingPathSupplier;
 import org.jooq.tools.reflect.Reflect;
 import org.junit.Before;
 import org.junit.BeforeClass;

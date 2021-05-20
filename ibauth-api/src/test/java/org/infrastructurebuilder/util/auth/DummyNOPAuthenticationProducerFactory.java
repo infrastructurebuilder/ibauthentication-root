@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright © 2019 admin (admin@infrastructurebuilder.org)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,7 +26,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.eclipse.sisu.Typed;
-import org.infrastructurebuilder.util.config.PathSupplier;
+import org.infrastructurebuilder.util.core.PathSupplier;
 
 @Named("fake")
 @Typed(IBAuthenticationProducerFactory.class)

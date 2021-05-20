@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright © 2019 admin (admin@infrastructurebuilder.org)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,9 +18,9 @@ package org.infrastructurebuilder.util.auth;
 import static java.util.Objects.requireNonNull;
 import static java.util.Optional.of;
 import static java.util.Optional.ofNullable;
-import static org.infrastructurebuilder.IBConstants.PASSWORD;
-import static org.infrastructurebuilder.IBConstants.USERNAME;
-import static org.infrastructurebuilder.util.IBUtils.getOptString;
+import static org.infrastructurebuilder.util.core.IBUtils.getOptString;
+import static org.infrastructurebuilder.util.constants.IBConstants.PASSWORD;
+import static org.infrastructurebuilder.util.constants.IBConstants.USERNAME;
 
 import java.util.Optional;
 import java.util.UUID;

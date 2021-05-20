@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright © 2019 admin (admin@infrastructurebuilder.org)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +15,7 @@
  */
 package org.infrastructurebuilder.util.auth.azuredevops;
 
-import static org.infrastructurebuilder.IBConstants.*;
+import static org.infrastructurebuilder.util.constants.IBConstants.AZUREDEVOPS;
 
 import java.time.Instant;
 import java.util.Arrays;

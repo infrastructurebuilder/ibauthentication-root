@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright © 2019 admin (admin@infrastructurebuilder.org)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -31,7 +31,7 @@ import java.util.stream.Collectors;
 import org.infrastructurebuilder.util.auth.DefaultIBAuthentication;
 import org.infrastructurebuilder.util.auth.DummyNOPAuthenticationProducerFactory;
 import org.infrastructurebuilder.util.auth.IBAuthException;
-import org.infrastructurebuilder.util.config.WorkingPathSupplier;
+import org.infrastructurebuilder.util.core.WorkingPathSupplier;
 import org.jooq.tools.reflect.Reflect;
 import org.junit.Before;
 import org.junit.Test;

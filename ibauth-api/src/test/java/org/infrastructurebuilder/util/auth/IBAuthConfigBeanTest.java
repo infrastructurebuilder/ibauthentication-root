@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright © 2019 admin (admin@infrastructurebuilder.org)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,8 +25,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
-import org.infrastructurebuilder.util.config.PathSupplier;
-import org.infrastructurebuilder.util.config.WorkingPathSupplier;
+import org.infrastructurebuilder.util.core.PathSupplier;
+import org.infrastructurebuilder.util.core.WorkingPathSupplier;
 import org.joor.Reflect;
 import org.json.JSONObject;
 import org.junit.Before;
