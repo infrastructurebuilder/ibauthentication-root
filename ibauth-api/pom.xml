@@ -16,7 +16,8 @@
     limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
     <groupId>org.infrastructurebuilder.util.auth</groupId>
     <artifactId>ibauthentication-root</artifactId>
@@ -32,6 +33,8 @@
     <jacoco.max.missed.classes>0</jacoco.max.missed.classes>
     <test.coverage.percentage.required>80</test.coverage.percentage.required>
     <plexus-interactivity-api.version>1.0-alpha-6</plexus-interactivity-api.version>
+    <ib.versioning.support.plugin.version>0.15.2-SNAPSHOT</ib.versioning.support.plugin.version>
+
   </properties>
   <dependencies>
     <dependency>
