@@ -33,7 +33,6 @@
     <jacoco.max.missed.classes>0</jacoco.max.missed.classes>
     <test.coverage.percentage.required>80</test.coverage.percentage.required>
     <plexus-interactivity-api.version>1.0-alpha-6</plexus-interactivity-api.version>
-    <ib.versioning.support.plugin.version>0.15.2-SNAPSHOT</ib.versioning.support.plugin.version>
 
   </properties>
   <dependencies>
